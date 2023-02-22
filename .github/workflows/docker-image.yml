@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker login -u "shrinivas1080" -p "8390500549Shri@"
-        docker build -t hello-html .
-        docker push hello-html
+        docker build -t shrinivas1080/hello-html .
+        docker push shrinivas1080/hello-html
