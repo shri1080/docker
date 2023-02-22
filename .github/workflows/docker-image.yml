@@ -18,5 +18,4 @@ jobs:
       run: |
         echo docker login -u "shrinivas1080" -p "8390500549Shri@"
         docker build -t hello-html .
-        docker run -p 8092:80  hello-html
         docker push hello-html
