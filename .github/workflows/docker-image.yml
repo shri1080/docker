@@ -6,7 +6,7 @@ on:
     tags:
       - '*'
     branches:
-      - main
+      - test
 
 jobs:        
   build-login-publish:
