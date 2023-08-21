@@ -26,11 +26,10 @@ jobs:
       - name: build image
         run: docker build -t shrinivas1080/hello-html .
 
-      - name: tag image with version id
-        run: docker image tag shrinivas1080/hello-html:latest shrinivas1080/hello-html:${GITHUB_REF##*/}
-
-      - name: push latest image
-        run: docker push shrinivas1080/hello-html:latest
-
-      - name: push image with Version id
-        run: docker push shrinivas1080/hello-html:${GITHUB_REF##*/}
+      - name: push README to Dockerhub
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: elimuinformatics/a2d2
+          readme-filepath: README.md
