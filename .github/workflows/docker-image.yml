@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: vdeshkar/test-project
-          readme-filepath: docker/README.md
+          readme-filepath: README.md
