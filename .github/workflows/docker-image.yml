@@ -14,18 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2.1.0
-        with:
-          username: shrinivas1080
-          password: 8390500549Shri@
-
-      - name: build image
-        run: docker build -t shrinivas1080/hello-html .
-
       - name: push README to Dockerhub
         uses: peter-evans/dockerhub-description@v2
         with:
